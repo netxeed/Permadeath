@@ -1,0 +1,46 @@
+# Días 0-9
+1|Alvaro845|-||19:15:18|explosion:@creeper
+1|TheGamerMaldito|-||19:30:04|explosion:@creeper
+1|Cecililla|-||21:29:16|explosion:@creeper
+
+# Días 10-19
+10|Kaumaru|Has sido deleteado, titi||16:50:27|mob:@cave_spider
+10|Felipez360|Su estado es muerto||20:19:39|mob:@spider
+11|Ibai|Llano estás en el server, Ebay||17:23:54|explosion:@creeper
+11|ReventXzz|Equivalente a quedarse AFK en el LOL||17:28:08|mob:@cave_spider
+12|AKAWonder|De noob a doble noob||01:17:26|fireball:@blaze
+18|Ander|No es cortés irse antes de tiempo||22:46:29|mob:@spider
+
+# Días 20-29
+25|Rubik|Muere en el PvE otra vez||17:35:13|mob:@cave_spider
+26|Zeling|Ahora descansa en paz||01:58:13|mob:@magma_cube
+26|Tonacho|Le han puesto mirando a Cuenca||14:30:30|mob:@slime
+
+# Días 30-39
+30|OutConsumer|Se la han colado por el aro||13:38:31|mob:@chicken
+30|RanguGamer|Comer niños no le confirió vida eterna||17:20:36|mob:Silverfish de la Muerte
+30|FrigoAdri|Se ha quedado congelado||18:22:16|explosion:Ender Creeper
+32|Folagor|Failagor a partir de ahora||20:54:43|explosion:Ender Ghast
+32|Paracetamor|¿Dónde está el paracetamol?||20:58:49|void
+34|Gona89|Verdaderamente lamentable||17:03:26|explosion:Shulker Explosivo
+34|MrCarlosNoob|Por esto hizo 18 h de esclavitud||17:23:34|fall_assist:@cave_spider
+35|Mikecrack|El diamantito le sirvió de poco||22:49:47|explosion:Ender Ghast
+36|Cibergun|Ahora descansa en paz||19:55:59|explosion:Ender Ghast
+38|Alkapone|MYM: Malo y muerto||04:07:22|fall
+38|Lakshart|||18:22:00|explosion:Ender Ghast
+
+# Días 40-49
+44|Hardyluski|¡Más bien EZylusky!||14:10:12|explosion
+
+
+# Días 50-59
+50|BriiHD|Ahora por fin descansa en paz||07:59:25|explosion:Ghast Demoníaco
+56|ElRichMC|Eso no ha sido muy Ey Ey Ey de tu parte...||19:23:55|void
+59|EsVandal|Has sido promocionado al rango boomer||22:58:41|mob:Wither Skeleton Emperador
+
+# Días 60-69
+60|Kakytron|Ahora por fin descansa en paz||14:58:18|explosion:Ender Quantum Creeper
+60|CrisGreen|Ahora por fin descansa en paz||15:32:41|explosion:Ender Quantum Creeper
+60|Shadoune|Oui Oui, la baguette est bien mort||15:37:14|drown
+60|Killercreeper|Más conocido como el jugador permabaneado||20:43:39|explosion:Ender Quantum Creeper
+60|Luh|HDluh. Código Luh-XD en el cementerio del server||20:50:35|drown

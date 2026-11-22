@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "permadeath:min_day",
+      "min_day": 40
+    }
+  ],
+  "pattern": [
+    "C",
+    "B"
+  ],
+  "key": {
+    "C": "minecraft:chorus_fruit",
+    "B": "minecraft:glass_bottle"
+  },
+  "result": {
+    "id": "minecraft:dragon_breath",
+    "count": 1
+  }
+}

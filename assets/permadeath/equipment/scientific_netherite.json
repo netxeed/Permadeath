@@ -1,0 +1,10 @@
+{
+  "layers": {
+    "humanoid": [
+      { "texture": "permadeath:scientific" }
+    ],
+    "humanoid_leggings": [
+      { "texture": "permadeath:scientific" }
+    ]
+  }
+}

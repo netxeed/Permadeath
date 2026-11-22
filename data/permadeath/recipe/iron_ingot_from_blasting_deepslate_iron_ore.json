@@ -1,0 +1,6 @@
+{"type":"minecraft:blasting","fabric:load_conditions": [
+  {
+    "condition": "permadeath:min_day",
+    "min_day": 50
+  }
+],"ingredient":"minecraft:deepslate_iron_ore","result":{"id":"minecraft:iron_nugget","count":1},"experience":0.7,"cookingtime":100}

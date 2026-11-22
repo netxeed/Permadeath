@@ -1,0 +1,6 @@
+{"type":"minecraft:smelting","fabric:load_conditions": [
+  {
+    "condition": "permadeath:min_day",
+    "min_day": 50
+  }
+],"ingredient":"minecraft:nether_gold_ore","result":{"id":"minecraft:gold_nugget","count":1},"experience":1.0,"cookingtime":200}

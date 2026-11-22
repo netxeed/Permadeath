@@ -1,0 +1,22 @@
+# Antes del día 30: solo el logro
+Ander|18|3|||si
+Rubik|25|6|||si
+Zeling|26|22|||si
+Tonacho|26|2|||si
+
+# Días 30-39: mensaje con probabilidad
+OutConsumer|30|7|57||si
+FrigoAdri|30|0|99||
+Folagor|32|18|67||si
+Gona89|34|0|99||
+MrCarlosNoob|34|0|99||
+Mikecrack|35|3|56||
+Cibergun|36|3|47||
+Alkapone|38|50|44||si
+Alkapone|38|45|0||
+Lakshart|38|6|32||
+
+# Desde el día 40: con cantidad de tótems
+Hardyluski|44|0|97|2|
+Shadoune|60|2|27|3|
+Luh|60|0|14|3|

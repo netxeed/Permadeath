@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "permadeath:min_day",
+      "min_day": 40
+    }
+  ],
+  "pattern": [
+    "S",
+    "D",
+    "S"
+  ],
+  "key": {
+    "S": "minecraft:shulker_shell",
+    "D": "minecraft:diamond_block"
+  },
+  "result": {
+    "id": "permadeath:end_relic",
+    "count": 1
+  }
+}

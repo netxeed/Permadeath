@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "GAG",
+    " G "
+  ],
+  "key": {
+    "G": "permadeath:infernal_netherite_block",
+    "A": "permadeath:netherite_leggings"
+  },
+  "result": {
+    "id": "permadeath:infernal_netherite_leggings",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "permadeath:min_day",
+      "min_day": 40
+    }
+  ],
+  "pattern": [
+    " S "
+  ],
+  "key": {
+    "S": "#minecraft:shulker_boxes"
+  },
+  "result": {
+    "id": "minecraft:shulker_shell",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "permadeath:beginning_relic",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+      "condition": "permadeath:min_day",
+      "min_day": 60
+    }
+  ]
+}

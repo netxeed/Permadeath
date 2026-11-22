@@ -1,0 +1,10 @@
+{
+  "type": "permadeath:super_apple",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+      "condition": "permadeath:min_day",
+      "min_day": 40
+    }
+  ]
+}
