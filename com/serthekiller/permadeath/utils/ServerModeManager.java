@@ -14,7 +14,7 @@ public class ServerModeManager extends class_18 {
 
    public static ServerModeManager get(MinecraftServer server) {
       class_3218 overworld = server.method_3847(class_1937.field_25179);
-      return (ServerModeManager)overworld.method_17983().method_17924(new class_18.class_8645(ServerModeManager::new, ServerModeManager::load, (class_4284)null), "permadeath_server_mode");
+      return (ServerModeManager)overworld.method_17983().method_17924(new class_18.class_8645<>(ServerModeManager::new, ServerModeManager::load, (class_4284)null), "permadeath_server_mode");
    }
 
    public boolean isRestricted() {

@@ -59,7 +59,7 @@ public abstract class LargeFireballMinix {
    private void onHitPlayer(class_3966 result, CallbackInfo ci) {
       class_1297 entityHit = result.method_17782();
       if (entityHit instanceof class_1657 player) {
-         class_1674 fireball = (class_1674)this;
+         class_1674 fireball = (class_1674)(Object)this;
          class_1297 owner = fireball.method_24921();
          if (owner instanceof class_1571 ghast) {
             if (ghast.method_16914() && ghast.method_5797().getString().contains("Demonio Flotante")) {

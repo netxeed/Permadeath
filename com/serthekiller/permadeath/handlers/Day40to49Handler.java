@@ -1484,7 +1484,7 @@ public class Day40to49Handler implements PhaseManager.PhaseHandler {
       public static PortalState get(MinecraftServer server) {
          class_3218 overworld = server.method_3847(class_1937.field_25179);
          class_26 storage = overworld.method_17983();
-         return (PortalState)storage.method_17924(new class_18.class_8645(PortalState::new, PortalState::load, class_4284.field_19212), "permadeath_portal_state_day40");
+         return (PortalState)storage.method_17924(new class_18.class_8645<>(PortalState::new, PortalState::load, class_4284.field_19212), "permadeath_portal_state_day40");
       }
    }
 }

@@ -45,7 +45,7 @@ public abstract class LivingEntityMixin {
       at = {@At("HEAD")}
    )
    private void detectNightVisionExpire(CallbackInfo ci) {
-      class_1309 entity = (class_1309)this;
+      class_1309 entity = (class_1309)(Object)this;
       if (!entity.method_37908().field_9236 && entity instanceof class_1657) {
          if (entity.method_37908().method_27983().equals(class_1937.field_25181) || !(entity instanceof class_1657)) {
             if (DateManager.getCurrentRealDay() < 70L) {
@@ -88,7 +88,7 @@ public abstract class LivingEntityMixin {
       cancellable = true
    )
    private void permadeath$cancelShulkerVanillaDrops(class_3218 level, class_1282 damageSource, boolean hitByPlayer, CallbackInfo ci) {
-      if (this instanceof class_1606 && DateManager.getCurrentRealDay() < 70L) {
+      if (((Object)this) instanceof class_1606 && DateManager.getCurrentRealDay() < 70L) {
          ci.cancel();
       }
 
@@ -100,7 +100,7 @@ public abstract class LivingEntityMixin {
    )
    private void onShulkerDeath(class_1282 source, CallbackInfo ci) {
       long currentDay = DateManager.getCurrentRealDay();
-      class_1309 entity = (class_1309)this;
+      class_1309 entity = (class_1309)(Object)this;
       if (entity instanceof class_1606 shulker) {
          if (!shulker.method_37908().field_9236) {
             class_1541 tnt = new class_1541(shulker.method_37908(), shulker.method_23317(), shulker.method_23318(), shulker.method_23321(), (class_1309)null);
@@ -131,7 +131,7 @@ public abstract class LivingEntityMixin {
    )
    private int fasterDrowning(int original) {
       long currentDay = DateManager.getCurrentRealDay();
-      class_1309 self = (class_1309)this;
+      class_1309 self = (class_1309)(Object)this;
       int current = self.method_5669();
       if (original >= current) {
          return original;
@@ -158,7 +158,7 @@ public abstract class LivingEntityMixin {
       cancellable = true
    )
    private void blockPotionDamage(class_3218 serverLevel, class_1282 source, float f, CallbackInfoReturnable<Boolean> cir) {
-      class_1309 self = (class_1309)this;
+      class_1309 self = (class_1309)(Object)this;
       if (self.method_5752().contains("PotionImmune") && (source.method_49708(class_8111.field_42329) || source.method_49708(class_8111.field_42349))) {
          cir.setReturnValue(false);
          cir.cancel();

@@ -22,7 +22,7 @@ public class RaidHeroEffectMixin {
    private void limitHeroOfVillageEffect(class_1293 instance, class_1297 source, CallbackInfoReturnable<Boolean> cir) {
       long currentDay = DateManager.getCurrentRealDay();
       if (instance.method_55654(class_1294.field_18980) && instance.method_5584() > 6000 && currentDay >= 50L && DateManager.getCurrentRealDay() < 70L) {
-         class_1309 self = (class_1309)this;
+         class_1309 self = (class_1309)(Object)this;
          self.method_6088().put(class_1294.field_18980, new class_1293(class_1294.field_18980, 6000, instance.method_5578()));
          cir.setReturnValue(true);
       }

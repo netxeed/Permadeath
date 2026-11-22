@@ -49,7 +49,19 @@ public class UniformIslandJigsawStructure extends class_3195 {
    private final List<class_8889> poolAliases;
    private final class_9778 dimensionPadding;
    private final class_9822 liquidSettings;
-   public static final MapCodec<UniformIslandJigsawStructure> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(method_42697(instance), class_3785.field_24954.fieldOf("start_pool").forGetter((s) -> s.startPool), class_2960.field_25139.optionalFieldOf("start_jigsaw_name").forGetter((s) -> s.startJigsawName), Codec.intRange(0, 20).fieldOf("size").forGetter((s) -> s.maxDepth), class_6122.field_31540.fieldOf("start_height").forGetter((s) -> s.startHeight), Codec.BOOL.fieldOf("use_expansion_hack").forGetter((s) -> s.useExpansionHack), class_2903.field_24772.optionalFieldOf("project_start_to_heightmap").forGetter((s) -> s.projectStartToHeightmap), Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter((s) -> s.maxDistanceFromCenter), Codec.list(class_8889.field_46825).optionalFieldOf("pool_aliases", List.of()).forGetter((s) -> s.poolAliases), class_9778.field_51952.optionalFieldOf("dimension_padding", class_5434.field_51911).forGetter((s) -> s.dimensionPadding), class_9822.field_52239.optionalFieldOf("liquid_settings", class_5434.field_52235).forGetter((s) -> s.liquidSettings)).apply(instance, UniformIslandJigsawStructure::new)).validate(UniformIslandJigsawStructure::verifyRange);
+   public static final MapCodec<UniformIslandJigsawStructure> CODEC = RecordCodecBuilder.mapCodec((RecordCodecBuilder.Instance<UniformIslandJigsawStructure> instance) -> instance.group(
+         method_42697(instance),
+         class_3785.field_24954.fieldOf("start_pool").forGetter((UniformIslandJigsawStructure s) -> s.startPool),
+         class_2960.field_25139.optionalFieldOf("start_jigsaw_name").forGetter((UniformIslandJigsawStructure s) -> s.startJigsawName),
+         Codec.intRange(0, 20).fieldOf("size").forGetter((UniformIslandJigsawStructure s) -> s.maxDepth),
+         class_6122.field_31540.fieldOf("start_height").forGetter((UniformIslandJigsawStructure s) -> s.startHeight),
+         Codec.BOOL.fieldOf("use_expansion_hack").forGetter((UniformIslandJigsawStructure s) -> s.useExpansionHack),
+         class_2903.field_24772.optionalFieldOf("project_start_to_heightmap").forGetter((UniformIslandJigsawStructure s) -> s.projectStartToHeightmap),
+         Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter((UniformIslandJigsawStructure s) -> s.maxDistanceFromCenter),
+         Codec.list(class_8889.field_46825).optionalFieldOf("pool_aliases", List.of()).forGetter((UniformIslandJigsawStructure s) -> s.poolAliases),
+         class_9778.field_51952.optionalFieldOf("dimension_padding", class_5434.field_51911).forGetter((UniformIslandJigsawStructure s) -> s.dimensionPadding),
+         class_9822.field_52239.optionalFieldOf("liquid_settings", class_5434.field_52235).forGetter((UniformIslandJigsawStructure s) -> s.liquidSettings)
+      ).apply(instance, UniformIslandJigsawStructure::new)).validate(UniformIslandJigsawStructure::verifyRange);
 
    public UniformIslandJigsawStructure(class_3195.class_7302 structureSettings, class_6880<class_3785> startPool, Optional<class_2960> startJigsawName, int maxDepth, class_6122 startHeight, boolean useExpansionHack, Optional<class_2902.class_2903> projectStartToHeightmap, int maxDistanceFromCenter, List<class_8889> poolAliases, class_9778 dimensionPadding, class_9822 liquidSettings) {
       super(structureSettings);

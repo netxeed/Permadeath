@@ -23,7 +23,7 @@ public abstract class PrimedTntMixin {
       at = {@At("HEAD")}
    )
    private void preExplosionFlyBlocks(CallbackInfo ci) {
-      class_1541 tnt = (class_1541)this;
+      class_1541 tnt = (class_1541)(Object)this;
       if (!tnt.method_37908().field_9236 && tnt.method_5752().contains("PermadeathTNT") && tnt.method_6969() <= 1) {
          class_3218 world = (class_3218)tnt.method_37908();
          class_2338 center = tnt.method_24515();

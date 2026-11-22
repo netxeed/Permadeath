@@ -16,7 +16,7 @@ public class MobCapMixin {
       cancellable = true
    )
    private void increaseMobCap(CallbackInfoReturnable<Integer> cir) {
-      class_1311 self = (class_1311)this;
+      class_1311 self = (class_1311)(Object)this;
       long currentDay = DateManager.getCurrentRealDay();
       if (self == class_1311.field_6302 && currentDay > 10L && currentDay < 70L) {
          int base = 140;

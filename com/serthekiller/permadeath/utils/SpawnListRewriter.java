@@ -42,7 +42,8 @@ public final class SpawnListRewriter {
                }
             }
 
-            return (class_6012)CACHE.computeIfAbsent(new Key(in, category, stage, biomeFlags), (k) -> build(in, category, stage, biomeFlags));
+            int resolvedBiomeFlags = biomeFlags;
+            return (class_6012)CACHE.computeIfAbsent(new Key(in, category, stage, resolvedBiomeFlags), (k) -> build(in, category, stage, resolvedBiomeFlags));
          }
       }
    }

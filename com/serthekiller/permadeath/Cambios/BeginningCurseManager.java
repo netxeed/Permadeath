@@ -18,7 +18,7 @@ public class BeginningCurseManager extends class_18 {
 
    public static BeginningCurseManager get(MinecraftServer server) {
       class_26 storage = server.method_30002().method_17983();
-      return (BeginningCurseManager)storage.method_17924(new class_18.class_8645(BeginningCurseManager::new, BeginningCurseManager::load, (class_4284)null), "permadeath_beginning_curse");
+      return (BeginningCurseManager)storage.method_17924(new class_18.class_8645<>(BeginningCurseManager::new, BeginningCurseManager::load, (class_4284)null), "permadeath_beginning_curse");
    }
 
    public boolean isFirstEntryClaimed() {

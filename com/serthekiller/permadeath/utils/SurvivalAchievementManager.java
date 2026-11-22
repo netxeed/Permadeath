@@ -41,7 +41,7 @@ public class SurvivalAchievementManager extends class_18 {
 
    public static SurvivalAchievementManager get(MinecraftServer server) {
       class_3218 overworld = server.method_3847(class_1937.field_25179);
-      return (SurvivalAchievementManager)overworld.method_17983().method_17924(new class_18.class_8645(SurvivalAchievementManager::new, SurvivalAchievementManager::load, (class_4284)null), "permadeath_survival_achievement");
+      return (SurvivalAchievementManager)overworld.method_17983().method_17924(new class_18.class_8645<>(SurvivalAchievementManager::new, SurvivalAchievementManager::load, (class_4284)null), "permadeath_survival_achievement");
    }
 
    public class_2487 method_75(class_2487 tag, class_7225.class_7874 registries) {

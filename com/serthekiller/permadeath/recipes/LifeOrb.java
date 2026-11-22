@@ -15,7 +15,7 @@ public class LifeOrb extends class_1852 {
       super(category);
    }
 
-   public boolean matches(class_9694 input, class_1937 level) {
+   public boolean method_8115(class_9694 input, class_1937 level) {
       if (input.method_59983() != 9) {
          return false;
       } else {
@@ -66,7 +66,7 @@ public class LifeOrb extends class_1852 {
       }
    }
 
-   public class_1799 assemble(class_9694 input, class_7225.class_7874 registries) {
+   public class_1799 method_8116(class_9694 input, class_7225.class_7874 registries) {
       return new class_1799(ModItems.LIFE_ORB.method_8389());
    }
 

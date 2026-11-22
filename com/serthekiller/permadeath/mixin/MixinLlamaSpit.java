@@ -26,7 +26,7 @@ public abstract class MixinLlamaSpit {
       if (var4 instanceof class_1309 living) {
          if (!living.method_37908().field_9236) {
             if (this.currentDay >= 50L && this.currentDay < 70L) {
-               class_1673 self = (class_1673)this;
+               class_1673 self = (class_1673)(Object)this;
                living.method_6092(new class_1293(class_1294.field_5899, 600, 2, false, true));
                living.method_6092(new class_1293(class_1294.field_5916, 200, 0, false, true));
                class_243 dir = living.method_19538().method_1020(self.method_19538()).method_1029();

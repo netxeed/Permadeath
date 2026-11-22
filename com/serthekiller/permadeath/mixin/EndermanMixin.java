@@ -23,7 +23,7 @@ public class EndermanMixin {
       cancellable = true
    )
    private void checkGreenCloudImmunity(class_3218 serverLevel, class_1282 damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
-      class_1560 enderman = (class_1560)this;
+      class_1560 enderman = (class_1560)(Object)this;
 
       for(class_1295 cloud : enderman.method_37908().method_18467(class_1295.class, enderman.method_5829().method_1014((double)1.0F))) {
          if (cloud.method_5600().method_10295() == class_2398.field_11211) {

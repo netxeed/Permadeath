@@ -298,7 +298,7 @@ public class PermadeathStorms {
             in.close();
          }
 
-         return reader;
+         return null;
       } catch (Exception e) {
          LOGGER.error("Error al leer {}", resourcePath, e);
          return null;

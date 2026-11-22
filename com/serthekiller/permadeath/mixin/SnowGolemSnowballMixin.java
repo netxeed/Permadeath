@@ -18,7 +18,7 @@ public abstract class SnowGolemSnowballMixin {
       at = {@At("HEAD")}
    )
    private void permadeath$onSnowGolemHit(class_3966 result, CallbackInfo ci) {
-      class_1680 self = (class_1680)this;
+      class_1680 self = (class_1680)(Object)this;
       class_1297 owner = self.method_24921();
       if (owner instanceof class_1473) {
          class_1297 target = result.method_17782();

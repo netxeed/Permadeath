@@ -94,7 +94,7 @@ public abstract class EnderDragonMixin extends class_1308 {
    private void managePhasesAndAttacks(CallbackInfo ci) {
       if (DateManager.getCurrentRealDay() < 70L) {
          if (!this.method_37908().field_9236) {
-            class_3218 world = (class_3218)this.method_37908();
+            class_3218 world = (class_3218)(Object)this.method_37908();
             this.checkEnragedPhase();
             this.handleSpinningAttack(world);
             if (!this.isSpinning) {
@@ -108,7 +108,7 @@ public abstract class EnderDragonMixin extends class_1308 {
 
    @Unique
    private void handleExtraFireballs(class_3218 world) {
-      class_1510 dragon = (class_1510)this;
+      class_1510 dragon = (class_1510)(Object)this;
       class_1527 currentPhase = dragon.method_6831().method_6864().method_6849();
       if (currentPhase != class_1527.field_7073) {
          this.customFireballTimer = 0;
@@ -128,7 +128,7 @@ public abstract class EnderDragonMixin extends class_1308 {
       class_243 dragonPos = this.method_19538().method_1031((double)0.0F, (double)this.method_17682() / (double)2.0F, (double)0.0F);
       class_243 targetPos = target.method_19538().method_1031((double)0.0F, (double)target.method_17682() / (double)2.0F, (double)0.0F);
       class_243 direction = targetPos.method_1020(dragonPos);
-      class_1670 fireball = new class_1670(world, (class_1309)this, direction);
+      class_1670 fireball = new class_1670(world, (class_1309)(Object)this, direction);
       fireball.method_5814(dragonPos.field_1352, dragonPos.field_1351, dragonPos.field_1350);
       world.method_8649(fireball);
    }
@@ -140,11 +140,11 @@ public abstract class EnderDragonMixin extends class_1308 {
    private void applyContinuousSpin(CallbackInfo ci) {
       if (!this.method_37908().field_9236) {
          if (this.isSpinning) {
-            this.performContinuousSpin((class_3218)this.method_37908());
+            this.performContinuousSpin((class_3218)(Object)this.method_37908());
          }
 
          if (this.isLightningAttackActive) {
-            this.continueLightningAttack((class_3218)this.method_37908());
+            this.continueLightningAttack((class_3218)(Object)this.method_37908());
          }
 
       }
@@ -162,7 +162,7 @@ public abstract class EnderDragonMixin extends class_1308 {
 
    @Unique
    private void handleSpinningAttack(class_3218 world) {
-      class_1510 dragon = (class_1510)this;
+      class_1510 dragon = (class_1510)(Object)this;
       class_1527 currentPhase = dragon.method_6831().method_6864().method_6849();
       boolean isPerched = currentPhase == class_1527.field_7081 || currentPhase == class_1527.field_7073 || currentPhase == class_1527.field_7072;
       if (isPerched) {
@@ -247,7 +247,7 @@ public abstract class EnderDragonMixin extends class_1308 {
 
    @Unique
    private void handleFlyingAttacks(class_3218 world) {
-      class_1510 dragon = (class_1510)this;
+      class_1510 dragon = (class_1510)(Object)this;
       class_1527 currentPhase = dragon.method_6831().method_6864().method_6849();
       if (currentPhase != class_1527.field_7081 && currentPhase != class_1527.field_7073) {
          ++this.flyingAttackTimer;
@@ -283,7 +283,7 @@ public abstract class EnderDragonMixin extends class_1308 {
          double radians = Math.toRadians(angle);
          double x = center.field_1352 + radius * Math.cos(radians);
          double z = center.field_1350 + radius * Math.sin(radians);
-         class_1541 tnt = new class_1541(world, x, center.field_1351, z, (class_1309)this);
+         class_1541 tnt = new class_1541(world, x, center.field_1351, z, (class_1309)(Object)this);
          tnt.method_6967(80);
          tnt.method_5780("PermadeathTNT");
          world.method_8649(tnt);

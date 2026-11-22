@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+dist/
+
+# Minecraft/Fabric development runs and generated files
+run/
+logs/
+*.class
+
+# IDE metadata
+.vscode/
+.idea/
+nbproject/private/
+nbbuild/
+nbdist/
+
+# Operating system files
+.DS_Store
+Thumbs.db

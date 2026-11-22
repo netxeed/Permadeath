@@ -1,0 +1,62 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = 'Permadeath'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    // El código fuente usa nombres intermediary (class_#### y method_####).
+    mappings "net.fabricmc:intermediary:${minecraft_version}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include 'com/**/*.java'
+            exclude 'build/**', 'dist/**', '.git/**', '.gradle/**', 'nbproject/**', 'gradle/**'
+        }
+        resources {
+            srcDirs = ['.']
+            include 'assets/**', 'data/**', 'META-INF/**', 'fabric.mod.json',
+                    'permadeath.mixins.json', 'modid.client.mixins.json'
+        }
+    }
+}
+
+loom {
+    mods {
+        'permadeath' {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+java {
+    toolchain {
+        // Nobara 44 provides OpenJDK 25; options.release below keeps the mod Java 21 compatible.
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('sourcesJar') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

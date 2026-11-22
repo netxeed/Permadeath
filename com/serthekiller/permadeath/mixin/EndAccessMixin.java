@@ -21,7 +21,7 @@ public abstract class EndAccessMixin {
    )
    private void permadeath$blockEndBeforeDay30(class_5454 transition, CallbackInfoReturnable<class_1297> cir) {
       if (transition.comp_2820().method_27983() == class_1937.field_25181 && DateManager.getCurrentRealDay() < 30L) {
-         class_3222 self = (class_3222)this;
+         class_3222 self = (class_3222)(Object)this;
          self.method_18799(self.method_18798().method_1031((double)0.0F, 0.3, (double)0.0F));
          cir.setReturnValue(self);
       }
@@ -34,7 +34,7 @@ public abstract class EndAccessMixin {
    )
    private void permadeath$onGameMode(class_1934 gameType, CallbackInfoReturnable<Boolean> cir) {
       if (cir.getReturnValueZ() && gameType == class_1934.field_9220) {
-         class_3222 p = (class_3222)this;
+         class_3222 p = (class_3222)(Object)this;
          if (p.method_5682() != null) {
             SurvivalAchievementManager.flagCheatDetected(p.method_5682(), p.method_5667(), "gamemode creative");
          }

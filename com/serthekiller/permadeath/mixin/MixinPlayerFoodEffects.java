@@ -24,7 +24,7 @@ public abstract class MixinPlayerFoodEffects {
       at = {@At("HEAD")}
    )
    private void permadeath$onCompleteUsingItem(CallbackInfo ci) {
-      class_1309 self = (class_1309)this;
+      class_1309 self = (class_1309)(Object)this;
       if (!self.method_37908().field_9236) {
          if (self instanceof class_1657) {
             class_1657 player = (class_1657)self;

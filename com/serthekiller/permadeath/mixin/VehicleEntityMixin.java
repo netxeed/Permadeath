@@ -16,7 +16,7 @@ public abstract class VehicleEntityMixin {
       cancellable = true
    )
    private void immuneToDamage(class_3218 serverLevel, class_1282 damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
-      class_8836 self = (class_8836)this;
+      class_8836 self = (class_8836)(Object)this;
       if (self.method_5752().contains("PotionSpawnerMinecart")) {
          cir.setReturnValue(false);
       }

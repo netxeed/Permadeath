@@ -20,7 +20,7 @@ public abstract class QuantumCreeperMixin {
       at = {@At("HEAD")}
    )
    private void quantumFuseSpeed(CallbackInfo ci) {
-      class_1548 creeper = (class_1548)this;
+      class_1548 creeper = (class_1548)(Object)this;
       long currentDay = DateManager.getCurrentRealDay();
       if (currentDay >= 60L) {
          String name = creeper.method_16914() ? creeper.method_5797().getString() : "";
@@ -36,7 +36,7 @@ public abstract class QuantumCreeperMixin {
       at = {@At("HEAD")}
    )
    private void quantumExplosion(CallbackInfo ci) {
-      class_1548 creeper = (class_1548)this;
+      class_1548 creeper = (class_1548)(Object)this;
       if (creeper.method_16914()) {
          String name = creeper.method_5797().getString();
          if (name.contains("Quantum Creeper") || name.contains("Ender Quantum Creeper")) {

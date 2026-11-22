@@ -34,7 +34,7 @@ public abstract class PlayerMixin extends class_1309 {
       if (!this.method_37908().field_9236) {
          if (this.method_37908().method_27983().equals(class_1937.field_25181)) {
             if (DateManager.getCurrentRealDay() < 70L) {
-               class_3218 serverLevel = (class_3218)this.method_37908();
+               class_3218 serverLevel = (class_3218)(Object)this.method_37908();
                boolean dragonAlive = false;
 
                for(class_1297 e : serverLevel.method_27909()) {
@@ -49,7 +49,7 @@ public abstract class PlayerMixin extends class_1309 {
 
                long day = DateManager.getCurrentRealDay();
                if (day >= 30L && day < 40L && dragonAlive) {
-                  class_1657 player = (class_1657)this;
+                  class_1657 player = (class_1657)(Object)this;
                   boolean hasNightVision = player.method_6059(class_1294.field_5925);
                   if (this.permadeath$hadNightVision && !hasNightVision) {
                      this.spawnDarkHeartsCloud(serverLevel, player);

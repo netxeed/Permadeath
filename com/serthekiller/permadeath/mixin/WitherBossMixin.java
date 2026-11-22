@@ -17,7 +17,7 @@ public class WitherBossMixin {
 )
    )
    private boolean preventBlockDestroyInDimension(class_2680 blockState) {
-      class_1528 self = (class_1528)this;
+      class_1528 self = (class_1528)(Object)this;
       return self.method_37908().method_27983().equals(ModDimensions.THE_BEGINNING_LEVEL_KEY) ? false : class_1528.method_6883(blockState);
    }
 }

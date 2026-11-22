@@ -26,7 +26,7 @@ public class MixinLivingEntityFatigue {
    )
    private void onAddEffect(class_1293 effect, class_1297 source, CallbackInfoReturnable<Boolean> cir) {
       if (effect.method_5579().equals(class_1294.field_5901) && this.currentDay >= 50L && DateManager.getCurrentRealDay() < 70L) {
-         class_1309 self = (class_1309)this;
+         class_1309 self = (class_1309)(Object)this;
          class_1293 doubled = new class_1293(class_1294.field_5901, effect.method_5584() * 2, effect.method_5578(), true, effect.method_5581());
          if (!effect.method_5591()) {
             self.method_26082(doubled, source);
@@ -41,7 +41,7 @@ public class MixinLivingEntityFatigue {
       at = {@At("HEAD")}
    )
    private void beforeRemoveAllEffects(CallbackInfoReturnable<Boolean> cir) {
-      class_1309 self = (class_1309)this;
+      class_1309 self = (class_1309)(Object)this;
       this.permadeath_savedFatigue = self.method_6112(class_1294.field_5901);
       this.permadeath_savedHunger = self.method_6112(class_1294.field_5903);
       this.permadeath_savedPosion = self.method_6112(class_1294.field_5899);
@@ -52,7 +52,7 @@ public class MixinLivingEntityFatigue {
       at = {@At("RETURN")}
    )
    private void afterRemoveAllEffects(CallbackInfoReturnable<Boolean> cir) {
-      class_1309 self = (class_1309)this;
+      class_1309 self = (class_1309)(Object)this;
       if (this.permadeath_savedFatigue != null && this.currentDay >= 50L) {
          self.method_26082(new class_1293(class_1294.field_5901, this.permadeath_savedFatigue.method_5584(), this.permadeath_savedFatigue.method_5578(), this.permadeath_savedFatigue.method_5591(), this.permadeath_savedFatigue.method_5581()), (class_1297)null);
          this.permadeath_savedFatigue = null;

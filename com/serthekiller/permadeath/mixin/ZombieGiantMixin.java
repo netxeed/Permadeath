@@ -23,7 +23,7 @@ public class ZombieGiantMixin {
       at = {@At("RETURN")}
    )
    private void permadeath$markGiant(class_5425 serverLevelAccessor, class_1266 difficultyInstance, class_3730 entitySpawnReason, class_1315 spawnGroupData, CallbackInfoReturnable<class_1315> cir) {
-      class_1642 self = (class_1642)this;
+      class_1642 self = (class_1642)(Object)this;
       if (self.method_5864() == class_1299.field_6051) {
          if (entitySpawnReason == class_3730.field_16459) {
             class_3218 sl = serverLevelAccessor.method_8410();
@@ -44,7 +44,7 @@ public class ZombieGiantMixin {
       cancellable = true
    )
    private void permadeath$giantNoSunBurn(CallbackInfoReturnable<Boolean> cir) {
-      if (GiantZombieHandler.isGiant((class_1642)this)) {
+      if (GiantZombieHandler.isGiant((class_1642)(Object)this)) {
          cir.setReturnValue(false);
       }
 

@@ -37,7 +37,7 @@ public class DragonFireballMixin {
    )
    private void customBallImpact(class_239 result, CallbackInfo ci) {
       if (DateManager.getCurrentRealDay() < 70L) {
-         class_1670 ball = (class_1670)this;
+         class_1670 ball = (class_1670)(Object)this;
          if (!ball.method_37908().field_9236) {
             boolean isEnraged = false;
             class_1297 var6 = ball.method_24921();

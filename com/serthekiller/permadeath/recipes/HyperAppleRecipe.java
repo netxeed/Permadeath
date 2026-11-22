@@ -16,7 +16,7 @@ public class HyperAppleRecipe extends class_1852 {
       super(category);
    }
 
-   public boolean matches(class_9694 input, class_1937 level) {
+   public boolean method_8115(class_9694 input, class_1937 level) {
       if (input.method_59991() == 3 && input.method_59992() == 3) {
          long day = DateManager.getCurrentRealDay();
 
@@ -42,7 +42,7 @@ public class HyperAppleRecipe extends class_1852 {
       }
    }
 
-   public class_1799 assemble(class_9694 input, class_7225.class_7874 registries) {
+   public class_1799 method_8116(class_9694 input, class_7225.class_7874 registries) {
       return new class_1799(ModItems.HYPER_GOLDEN_APPLE_PLUS.method_8389());
    }
 

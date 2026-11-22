@@ -15,7 +15,7 @@ public abstract class ShulkerMixin {
       cancellable = true
    )
    private void cancelTeleport(CallbackInfoReturnable<Boolean> cir) {
-      class_1606 self = (class_1606)this;
+      class_1606 self = (class_1606)(Object)this;
       if (self.method_5752().contains("ShulkerRojo")) {
          cir.setReturnValue(false);
       }
@@ -28,7 +28,7 @@ public abstract class ShulkerMixin {
       cancellable = true
    )
    private void notCollidableWhenRiding(CallbackInfoReturnable<Boolean> cir) {
-      class_1606 self = (class_1606)this;
+      class_1606 self = (class_1606)(Object)this;
       if (self.method_5765()) {
          cir.setReturnValue(false);
       }
@@ -41,7 +41,7 @@ public abstract class ShulkerMixin {
       cancellable = true
    )
    private void dontPushVehicleWhenRiding(CallbackInfo ci) {
-      class_1606 self = (class_1606)this;
+      class_1606 self = (class_1606)(Object)this;
       if (self.method_5765()) {
          ci.cancel();
       }

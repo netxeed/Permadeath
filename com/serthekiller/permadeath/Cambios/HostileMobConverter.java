@@ -197,15 +197,7 @@ public class HostileMobConverter {
             nearestPlayer = null;
          }
 
-         Objects.requireNonNull(mob);
-         byte var10 = 0;
-         //$FF: var10->value
-         //0->net/minecraft/class_1590
-         //1->net/minecraft/class_4836
-         //2->net/minecraft/class_5762
-         //3->net/minecraft/class_5354
-         switch (mob.typeSwitch<invokedynamic>(mob, var10)) {
-            case 0:
+         if (mob instanceof class_1590) {
                class_1590 zombifiedPiglin = (class_1590)mob;
                zombifiedPiglin.method_29514(Integer.MAX_VALUE);
                zombifiedPiglin.method_19540(true);
@@ -215,8 +207,7 @@ public class HostileMobConverter {
                }
 
                goalSelector.method_6277(2, new class_1366(mob, (double)1.0F, false));
-               break;
-            case 1:
+         } else if (mob instanceof class_4836) {
                class_4836 piglin = (class_4836)mob;
                clearAllGoals(mob);
                goalSelector.method_6277(1, new PiglinAggressiveAttackGoal(piglin, damage));
@@ -229,8 +220,7 @@ public class HostileMobConverter {
                   piglin.method_5980(nearestPlayer);
                   piglin.method_6015(nearestPlayer);
                }
-               break;
-            case 2:
+         } else if (mob instanceof class_5762) {
                class_5762 axolotl = (class_5762)mob;
                clearAllGoals(mob);
                goalSelector.method_6277(1, new AxolotlAggressiveAttackGoal(axolotl, damage));
@@ -242,8 +232,7 @@ public class HostileMobConverter {
                }
 
                goalSelector.method_6277(1, new CustomMeleeAttackGoal(mob, 1.2, true, damage));
-               break;
-            case 3:
+         } else if (mob instanceof class_5354) {
                class_5354 neutral = (class_5354)mob;
                neutral.method_29514(Integer.MAX_VALUE);
                if (nearestPlayer != null) {
@@ -344,23 +333,9 @@ public class HostileMobConverter {
       } else if (entity.method_5864() == class_1299.field_6091) {
          return false;
       } else {
-         Objects.requireNonNull(entity);
-         byte var2 = 0;
-         //$FF: var2->value
-         //0->net/minecraft/class_1429
-         //1->net/minecraft/class_1421
-         //2->net/minecraft/class_1480
-         switch (entity.typeSwitch<invokedynamic>(entity, var2)) {
-            case 0:
-               class_1429 ignored = (class_1429)entity;
-               return true;
-            case 1:
-               class_1421 ignored = (class_1421)entity;
-               return true;
-            case 2:
-               class_1480 ignored = (class_1480)entity;
-               return true;
-            default:
+         if (entity instanceof class_1429 || entity instanceof class_1421 || entity instanceof class_1480) {
+            return true;
+         } else {
                class_1299<?> type = entity.method_5864();
                if (type == class_1299.field_6047) {
                   return true;

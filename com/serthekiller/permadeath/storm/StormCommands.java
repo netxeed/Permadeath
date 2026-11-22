@@ -90,7 +90,8 @@ public class StormCommands {
          text = text + "§7Cambiar: §e/permadeath storm mode <permadeath|aleatorio|sin_tormenta>";
       }
 
-      ((class_2168)context.getSource()).method_9226(() -> class_2561.method_43470(text), false);
+      String message = text;
+      ((class_2168)context.getSource()).method_9226(() -> class_2561.method_43470(message), false);
       return 1;
    }
 

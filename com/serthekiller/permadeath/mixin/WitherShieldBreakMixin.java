@@ -25,7 +25,7 @@ public abstract class WitherShieldBreakMixin {
    private void permadeath$witherIgnoresShield(class_1282 damageSource, CallbackInfoReturnable<Boolean> cir) {
       if (isFromWither(damageSource)) {
          if (DateManager.getCurrentRealDay() >= 60L && DateManager.getCurrentRealDay() < 70L) {
-            class_1309 self = (class_1309)this;
+            class_1309 self = (class_1309)(Object)this;
             if (self.method_6039() && !self.method_37908().method_8608()) {
                class_1799 blockingStack = self.method_62821();
                self.method_37908().method_8421(self, (byte)30);

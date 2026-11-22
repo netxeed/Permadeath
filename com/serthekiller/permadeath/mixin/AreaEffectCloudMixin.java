@@ -25,7 +25,7 @@ public class AreaEffectCloudMixin {
       at = {@At("TAIL")}
    )
    private void customCloudLogic(CallbackInfo ci) {
-      class_1295 cloud = (class_1295)this;
+      class_1295 cloud = (class_1295)(Object)this;
       if (!cloud.method_37908().field_9236) {
          if (cloud.method_5752().contains("LightningCloud")) {
             this.handleLightningCloud(cloud);

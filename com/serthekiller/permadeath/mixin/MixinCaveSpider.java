@@ -43,7 +43,7 @@ public abstract class MixinCaveSpider {
    )
    private void shulkerAttachmentPoint(class_1297 passenger, CallbackInfoReturnable<class_243> cir) {
       if (passenger instanceof class_1606) {
-         class_1549 self = (class_1549)this;
+         class_1549 self = (class_1549)(Object)this;
          cir.setReturnValue(new class_243((double)0.0F, (double)self.method_17682(), (double)0.0F));
       }
 

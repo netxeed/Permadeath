@@ -18,7 +18,7 @@ public class PlayerCustomMessageManager extends class_18 {
 
    public static PlayerCustomMessageManager get(MinecraftServer server) {
       class_3218 overworld = server.method_3847(class_1937.field_25179);
-      return (PlayerCustomMessageManager)overworld.method_17983().method_17924(new class_18.class_8645(PlayerCustomMessageManager::new, PlayerCustomMessageManager::load, (class_4284)null), "permadeath_custom_messages");
+      return (PlayerCustomMessageManager)overworld.method_17983().method_17924(new class_18.class_8645<>(PlayerCustomMessageManager::new, PlayerCustomMessageManager::load, (class_4284)null), "permadeath_custom_messages");
    }
 
    public String getMessage(UUID uuid) {

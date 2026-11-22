@@ -18,7 +18,7 @@ public abstract class ShulkerBulletMixin {
       cancellable = true
    )
    private void spawnTntOnImpact(class_239 hitResult, CallbackInfo ci) {
-      class_1678 bullet = (class_1678)this;
+      class_1678 bullet = (class_1678)(Object)this;
       if (DateManager.getCurrentRealDay() < 70L) {
          if (!bullet.method_37908().field_9236) {
             class_1541 tnt = new class_1541(bullet.method_37908(), bullet.method_23317(), bullet.method_23318(), bullet.method_23321(), (class_1309)null);

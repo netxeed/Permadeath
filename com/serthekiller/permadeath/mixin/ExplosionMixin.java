@@ -15,7 +15,7 @@ public class ExplosionMixin {
       cancellable = true
    )
    private void protectBlocks(CallbackInfoReturnable<Boolean> cir) {
-      class_9892 self = (class_9892)this;
+      class_9892 self = (class_9892)(Object)this;
       if (self.method_64504().method_27983().equals(ModDimensions.THE_BEGINNING_LEVEL_KEY)) {
          cir.setReturnValue(false);
       }
