@@ -80,11 +80,11 @@ public abstract class EnderDragonMixin extends class_1308 {
    )
    private void initPermadeathDemon(class_1299<? extends class_1510> entityType, class_1937 level, CallbackInfo ci) {
       if (this.method_5996(class_5134.field_23716) != null) {
-         this.method_5996(class_5134.field_23716).method_6192((double)2000.0F);
+         this.method_5996(class_5134.field_23716).method_6192((double)2500.0F);
       }
 
-      this.method_6033(2000.0F);
-      this.method_5665(class_2561.method_43470("PERMADEATH DEMON").method_27695(new class_124[]{class_124.field_1065, class_124.field_1067}));
+      this.method_6033(2500.0F);
+      this.method_5665(class_2561.method_43470("PERMADEATHCORE DEMON").method_27695(new class_124[]{class_124.field_1065, class_124.field_1067}));
    }
 
    @Inject(
@@ -152,10 +152,10 @@ public abstract class EnderDragonMixin extends class_1308 {
 
    @Unique
    private void checkEnragedPhase() {
-      float threshold = this.method_6063() / 6.0F;
+      float threshold = this.method_6063() / 5.0F;
       if (this.method_6032() <= threshold && !this.isEnraged) {
          this.isEnraged = true;
-         this.method_5665(class_2561.method_43470("ENRAGED PERMADEATH DEMON").method_27695(new class_124[]{class_124.field_1065, class_124.field_1067}));
+         this.method_5665(class_2561.method_43470("ENRAGED PERMADEATHCORE DEMON").method_27695(new class_124[]{class_124.field_1065, class_124.field_1067}));
       }
 
    }
@@ -251,7 +251,7 @@ public abstract class EnderDragonMixin extends class_1308 {
       class_1527 currentPhase = dragon.method_6831().method_6864().method_6849();
       if (currentPhase != class_1527.field_7081 && currentPhase != class_1527.field_7073) {
          ++this.flyingAttackTimer;
-         int attackInterval = this.isEnraged ? 900 : 1200;
+         int attackInterval = this.isEnraged ? 600 : 900;
          if (this.flyingAttackTimer >= attackInterval) {
             class_5819 rand = world.method_8409();
             float roll = rand.method_43057();

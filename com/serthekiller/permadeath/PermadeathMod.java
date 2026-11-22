@@ -13,7 +13,6 @@ import com.serthekiller.permadeath.handlers.ArmorBonusHandler;
 import com.serthekiller.permadeath.handlers.DeathHandler;
 import com.serthekiller.permadeath.handlers.EndPillarBedrockHandler;
 import com.serthekiller.permadeath.handlers.PhaseManager;
-import com.serthekiller.permadeath.handlers.WelcomeMessageHandler;
 import com.serthekiller.permadeath.items.HyperAppleDataManager;
 import com.serthekiller.permadeath.items.LifeOrbLogicHandler;
 import com.serthekiller.permadeath.items.ModArmorMaterials;
@@ -102,7 +101,6 @@ public class PermadeathMod implements ModInitializer {
       MilkCurseHandler.register();
       StormExpulsionHandler.register();
       ModPlacementModifiers.register();
-      WelcomeMessageHandler.init();
       mikecrack.registerSpawner();
       DaySyncPayload.register();
       ServerLifecycleEvents.SERVER_STOPPED.register((ServerLifecycleEvents.ServerStopped)(server) -> {
