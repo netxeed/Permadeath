@@ -91,10 +91,7 @@ public class DeathHandler {
             player.method_7336(class_1934.field_9219);
             sendDeathTitles(server, playerName);
             playDeathSound(server);
-            long currentDayForSound = DateManager.getCurrentRealDay();
-            if (currentDayForSound >= 30L) {
-               broadcastSoundToAllPlayers(server, ModSounds.PERMADEATH, 100.0F, 1.0F);
-            }
+            broadcastSoundToAllPlayers(server, ModSounds.PERMADEATH, 100.0F, 1.0F);
 
             createDeathMonument(world, player);
             sendDeathMessages(server, playerName, player);
@@ -111,9 +108,7 @@ public class DeathHandler {
       if (server != null) {
          sendDeathTitles(server, playerName);
          playDeathSound(server);
-         if (DateManager.getCurrentRealDay() >= 30L) {
-            broadcastSoundToAllPlayers(server, ModSounds.PERMADEATH, 100.0F, 1.0F);
-         }
+         broadcastSoundToAllPlayers(server, ModSounds.PERMADEATH, 100.0F, 1.0F);
 
          String message = customMessage == null ? "Ahora por fin descansa en paz..." : customMessage;
          sendMainAndPersonalMessages(server, playerName, message);
