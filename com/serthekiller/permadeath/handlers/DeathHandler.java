@@ -90,12 +90,11 @@ public class DeathHandler {
             player.method_5780("muerte1");
             player.method_7336(class_1934.field_9219);
             sendDeathTitles(server, playerName);
-            playDeathSound(server);
-            broadcastSoundToAllPlayers(server, ModSounds.PERMADEATH, 100.0F, 1.0F);
+            playDeathSounds(server, player);
 
             createDeathMonument(world, player);
             sendDeathMessages(server, playerName, player);
-            scheduleRespawn(player, world, 0);
+            scheduleRespawn(player, 0);
             banPlayer(server, player);
             StormHandler.StormEntry stormEntry = StormHandler.addPlayerDeathStorm(server, playerName);
             scheduleDeathTrainMessage(server, StormHandler.formatDuration(stormEntry.totalTicks), 100);
@@ -107,8 +106,7 @@ public class DeathHandler {
    public static void announceDeath(MinecraftServer server, String playerName, String customMessage, long stormTicks, String cause) {
       if (server != null) {
          sendDeathTitles(server, playerName);
-         playDeathSound(server);
-         broadcastSoundToAllPlayers(server, ModSounds.PERMADEATH, 100.0F, 1.0F);
+         playDeathSounds(server, null);
 
          String message = customMessage == null ? "Ahora por fin descansa en paz..." : customMessage;
          sendMainAndPersonalMessages(server, playerName, message);
@@ -188,19 +186,15 @@ public class DeathHandler {
       })).start();
    }
 
-   private static void scheduleRespawn(class_3222 player, class_3218 world, int delayTicks) {
+   private static void scheduleRespawn(class_3222 player, int delayTicks) {
       MinecraftServer server = player.method_37908().method_8503();
       if (server != null) {
-         long currentDay = DateManager.getCurrentRealDay();
          (new Thread(() -> {
             try {
                Thread.sleep((long)delayTicks * 50L);
                server.execute(() -> {
                   try {
                      player.field_13987.method_12068(new class_2799(class_2800.field_12774));
-                     if (currentDay >= 30L) {
-                        world.method_8396((class_1657)null, player.method_24515(), ModSounds.PERMADEATH, class_3419.field_15250, 100.0F, 1.0F);
-                     }
                   } catch (Exception e) {
                      LOGGER.error("Error al hacer respawn automático", e);
                   }
@@ -218,9 +212,9 @@ public class DeathHandler {
       GameProfile profile = player.method_7334();
       (new Thread(() -> {
          try {
-            Thread.sleep(4000L);
+            Thread.sleep(2000L);
             server.execute(() -> {
-               class_3336 banEntry = new class_3336(profile, (Date)null, "Permadeath", (Date)null, "Has muerto en Permadeath. Baneo permanente.");
+               class_3336 banEntry = new class_3336(profile, (Date)null, "Permadeath", (Date)null, "Has muerto. Baneo permanente.");
                server.method_3760().method_14563().method_14633(banEntry);
                class_2561 kickMessage = class_2561.method_43470("Has sido PERMABANEADO").method_27694((style) -> style.method_10977(class_124.field_1061));
                class_3222 current = server.method_3760().method_14602(profile.getId());
@@ -328,23 +322,49 @@ public class DeathHandler {
 
    }
 
-   private static void playDeathSound(MinecraftServer server) {
-      if (server != null) {
-         broadcastSoundToAllPlayers(server, class_3417.field_14580, 100.0F, 0.3F);
-         scheduleSecondSound(server, 100);
+   private static void playDeathSounds(MinecraftServer server, class_3222 deceasedPlayer) {
+      if (server == null) {
+         return;
       }
-   }
 
-   private static void scheduleSecondSound(MinecraftServer server, int delay) {
+      broadcastSoundToAllPlayersExcept(server, class_3417.field_14580, 100.0F, 0.3F, deceasedPlayer);
+      broadcastSoundToAllPlayersExcept(server, ModSounds.PERMADEATH, 100.0F, 1.0F, deceasedPlayer);
+
+      if (deceasedPlayer != null) {
+         (new Thread(() -> {
+            try {
+               Thread.sleep(250L);
+               server.execute(() -> {
+                  class_3222 currentPlayer = server.method_3760().method_14602(deceasedPlayer.method_5667());
+                  if (currentPlayer != null) {
+                     class_3218 playerLevel = currentPlayer.method_51469();
+                     playerLevel.method_8396((class_1657)null, currentPlayer.method_24515(), class_3417.field_14580, class_3419.field_15250, 100.0F, 0.3F);
+                     playerLevel.method_8396((class_1657)null, currentPlayer.method_24515(), ModSounds.PERMADEATH, class_3419.field_15250, 100.0F, 1.0F);
+                  }
+               });
+            } catch (InterruptedException e) {
+               LOGGER.error("Error al programar sonidos para el jugador fallecido", e);
+            }
+         })).start();
+      }
+
       (new Thread(() -> {
          try {
-            Thread.sleep((long)delay * 50L);
+            Thread.sleep(5000L);
             server.execute(() -> broadcastSoundToAllPlayers(server, class_3417.field_14721, 100.0F, 1.0F));
          } catch (InterruptedException e) {
-            LOGGER.error("Error al programar segundo sonido", e);
+            LOGGER.error("Error al programar el sonido del caballo esqueleto", e);
          }
-
       })).start();
+   }
+
+   private static void broadcastSoundToAllPlayersExcept(MinecraftServer server, class_3414 sound, float volume, float pitch, class_3222 excludedPlayer) {
+      for(class_3222 player : server.method_3760().method_14571()) {
+         if (player != excludedPlayer) {
+            class_3218 playerLevel = player.method_51469();
+            playerLevel.method_8396((class_1657)null, player.method_24515(), sound, class_3419.field_15250, volume, pitch);
+         }
+      }
    }
 
    private static void sendDeathMessages(MinecraftServer server, String playerName, class_3222 player) {
